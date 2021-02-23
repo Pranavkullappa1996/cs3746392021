@@ -60,9 +60,9 @@ public class MainActivity extends AppCompatActivity {
         smsbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent sms=new Intent(Intent.ACTION_SEND);
+                Intent sms=new Intent(Intent.ACTION_SENDTO);
+                sms.setType("text/plain");
                 sms.setData(Uri.parse("smsto:9294983669"));
-               // sms.setType(HTTP.PLAIN_TEXT_TYPE);
                 sms.putExtra("sms_body", "hello");
                 try {
                     startActivity(sms);
@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
                 map.setData(Uri.parse("geo:0,0?q=1600+Amphitheatre+Parkway%2C+CA"));
 
                     startActivity(map);
-                
+
             }
         });
 
