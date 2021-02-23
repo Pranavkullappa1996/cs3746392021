@@ -75,9 +75,9 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Uri webpage = Uri.parse("https://portal5.pace.edu/web/home-community/home");
                 Intent web = new Intent(Intent.ACTION_VIEW, webpage);
-                if (web.resolveActivity(getPackageManager()) != null) {
+
                     startActivity(web);
-                }
+
             }
         });
         Button mapbutton=(Button)findViewById(R.id.button5);
@@ -86,9 +86,9 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent map = new Intent(Intent.ACTION_VIEW);
                 map.setData(Uri.parse("geo:0,0?q=1600+Amphitheatre+Parkway%2C+CA"));
-                if (map.resolveActivity(getPackageManager()) != null) {
+
                     startActivity(map);
-                }
+                
             }
         });
 
